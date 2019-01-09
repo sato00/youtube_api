@@ -1,0 +1,29 @@
+<div class = "header">
+  <h1>YouTube api</h1>
+
+  <ul>
+    <li><%= link_to("ジャンル別","/channels/show") %></li>
+    <li>気分別</li>
+  </ul>
+</div>
+
+
+<div class = "body">
+
+  <div class = "selectbox" >
+  <%= form_for  do |f|%>
+  <%= f.label :"ジャンル" %>
+  <%=f.select category,[["JPOP",],["ロック"]], class:form-connrol%>
+
+
+
+  <% end %>
+  </div>
+
+  <div class =  "list1">
+    <% @movieId.each do |movieId| %>
+    <h2><%= @title %></h2>
+    <iframe src="https://www.youtube.com/embed/<%= movieId %>" allowfullscreen></iframe>
+    <% end %>
+  </div>
+</div>

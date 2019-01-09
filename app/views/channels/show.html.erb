@@ -1,0 +1,16 @@
+<div class = "header">
+  <h1>YouTube api</h1>
+
+  <ul>
+    <li>ジャンル別</li>
+    <li>気分別</li>
+  </ul>
+</div>
+
+  <div class =  "list1">
+    <% @jpopId.each do |jpopId| %>
+    <h2><%= @title %></h2>
+    <iframe src="https://www.youtube.com/embed/<%= jpopId %>" allowfullscreen></iframe>
+    <% end %>
+  </div>
+</div>

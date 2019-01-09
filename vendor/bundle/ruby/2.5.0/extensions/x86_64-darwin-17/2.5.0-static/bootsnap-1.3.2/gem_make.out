@@ -1,0 +1,15 @@
+current directory: /Users/kikuchi/sample/youtube_api/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+/Users/kikuchi/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20190107-3329-x7c8o9.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kikuchi/sample/youtube_api/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/kikuchi/sample/youtube_api/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/kikuchi/sample/youtube_api/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20190107-3329-1p1iv1x/bootsnap
