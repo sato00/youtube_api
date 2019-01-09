@@ -6,7 +6,6 @@ class ChannelsController < ApplicationController
 
     def index
       @movieId = Youtube.search_videoid
-
     end
 
     def show

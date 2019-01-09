@@ -25,6 +25,8 @@ module Youtube
     # でもコンソールは1回ずつ出るから5つ出てくる
     # ========================================-
   end
+
+  
 end
 
   # module_function :search_videoid
