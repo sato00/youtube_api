@@ -11,12 +11,9 @@
 <div class = "body">
 
   <div class = "selectbox" >
-  <%= form_for  do |f|%>
+  <%= form_for @category, do |f| %>
   <%= f.label :"ジャンル" %>
-  <%=f.select category,[["JPOP",],["ロック"]], class:form-connrol%>
-
-
-
+  <%= f.select :category,[["JPOP","JPOP"],["R&B","R&B"],["HIPHOP","HIPHOP"],["ロック","ロック"],["クラシック","クラシック"],["レゲエ","レゲエ"]], class:form-connrol%>
   <% end %>
   </div>
 
