@@ -1,16 +1,11 @@
 <div class = "header">
   <h1>YouTube api</h1>
-
-  <ul>
-    <li>ジャンル別</li>
-    <li>気分別</li>
-  </ul>
 </div>
 
-<div class = "main">
-  <div class =  "list1">
+<div class = "show_main">
+  <div class =  "list">
     <% @movieId.each do |movieId| %>
-    <h2><%= @title %></h2>
+
     <iframe src="https://www.youtube.com/embed/<%= movieId %>" allowfullscreen></iframe>
     <% end %>
   </div>

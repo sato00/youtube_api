@@ -4,30 +4,29 @@ module Youtube
 
   DEVELOPER_KEY = 'AIzaSyB-jBXW-XxoC8RceDByu7u--0yvTzkCqnE'
 
-  def search_videoid
-    url = "https://www.googleapis.com/youtube/v3/search?part=id&channelId=UCiX-HGeGIXJLIexjt1jEjWg&order=viewCount&maxResults=15&key=#{DEVELOPER_KEY}"
+    def search_videoid(channelId)
 
-    result = Net::HTTP.get(URI.parse(url))
+      url = "https://www.googleapis.com/youtube/v3/search?part=id&channelId=#{channelId}&order=viewCount&maxResults=15&key=#{DEVELOPER_KEY}"
 
-    data = JSON.parse(result)
+      result = Net::HTTP.get(URI.parse(url))
 
-    items = data["items"]
+      data = JSON.parse(result)
 
-    movieId = items.map{ |item| item['id']['videoId'] }
+      items = data["items"]
 
-    # ========================================-
-    # map→要素の数だけ繰り返しブロックを実行し、ブロックの戻り値を集めた配列を作成して返す。
+      movieId = items.map{ |item| item['id']['videoId'] }
 
-    # items.each do |n|
-    #   @movieId = n["id"]["videoId"]
-    # end
-    # これだと@movieIdは上書きされる。
-    # でもコンソールは1回ずつ出るから5つ出てくる
-    # ========================================-
+      # ========================================-
+      # map→要素の数だけ繰り返しブロックを実行し、ブロックの戻り値を集めた配列を作成して返す。
+
+      # items.each do |n|
+      #   @movieId = n["id"]["videoId"]
+      # end
+      # これだと@movieIdは上書きされる。
+      # でもコンソールは1回ずつ出るから5つ出てくる
+      # ========================================-
+    end
   end
-
-  
-end
 
   # module_function :search_videoid
   # →この場合は、コントローラーに「include Youtube」が必要
